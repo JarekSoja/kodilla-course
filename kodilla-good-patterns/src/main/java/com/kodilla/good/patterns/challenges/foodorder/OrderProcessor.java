@@ -1,20 +1,28 @@
 package com.kodilla.good.patterns.challenges.foodorder;
 
-public class OrderProcessor {
+class OrderProcessor {
 
-    private TestingData testingData;
-    private Order order;
+    private InformationService informationService;
+    private OrderService orderService;
+    private OrderRepository orderRepository;
 
-    public OrderProcessor(TestingData testingData) {
-        this.testingData = testingData;
+    public OrderProcessor(final InformationService informationService,
+                           final OrderService orderService,
+                           final OrderRepository orderRepository) {
+        this.informationService = informationService;
+        this.orderService = orderService;
+        this.orderRepository = orderRepository;
     }
 
-    private void getOrderFromWebsite(){
-        this.order = new Order(new HealthyShop("Healthiest vegetables", testingData.getDummyWarehouse()), "potato", 2.0);
-    }
+    public OrderDto process(final OrderRequest orderRequest) {
+        boolean isSold = orderService.order(orderRequest.getUser(), orderRequest.getOrderedProducts());
 
-    public boolean validateOrder(){
-        return (this.order.getFoodSupplier().getOfferedProducts().contains(this.order.getOrderedProducts()));
+        if(isSold) {
+            informationService.inform(orderRequest.getUser());
+            orderRepository.createOrder(orderRequest.getUser(), orderRequest.getOrderedProducts());
+            return new OrderDto(orderRequest.getUser(), true);
+        } else {
+            return new OrderDto(orderRequest.getUser(), false);
+        }
     }
-
 }
