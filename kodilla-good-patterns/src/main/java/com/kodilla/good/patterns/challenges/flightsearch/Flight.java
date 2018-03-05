@@ -4,41 +4,37 @@ import java.util.Objects;
 
 public class Flight {
 
-    private final String DEPARTURE;
-    private String TRANSFER;
-    private final String ARRIVAL;
+    private final String departure;
+    private String transfer;
+    private final String arrival;
 
 
-    public Flight(final String DEPARTURE, final String ARRIVAL) {
-        this.DEPARTURE = DEPARTURE;
-        this.ARRIVAL = ARRIVAL;
+    Flight(final String departure, final String arrival) {
+        this.departure = departure;
+        this.arrival = arrival;
     }
 
-    public Flight(String DEPARTURE, String TRANSFER, String ARRIVAL) {
-        this.DEPARTURE = DEPARTURE;
-        this.TRANSFER = TRANSFER;
-        this.ARRIVAL = ARRIVAL;
+   Flight(String departure, String transfer, String arrival) {
+        this.departure = departure;
+        this.transfer = transfer;
+        this.arrival = arrival;
     }
 
-    public String getDEPARTURE() {
-        return DEPARTURE;
+    public String getDeparture() {
+        return departure;
     }
 
-    public String getARRIVAL() {
-        return ARRIVAL;
+    public String getArrival() {
+        return arrival;
     }
 
-    public void setTRANSFER(String TRANSFER) {
-        this.TRANSFER = TRANSFER;
-    }
-
-    public String getTRANSFER() {
-        return TRANSFER;
+    public String getTransfer() {
+        return transfer;
     }
 
     @Override
     public String toString() {
-        return "Departure: " + DEPARTURE + "\nArrival: " + ARRIVAL;
+        return "Departure: " + departure + "\nArrival: " + arrival;
     }
 
     @Override
@@ -46,13 +42,13 @@ public class Flight {
         if (this == o) return true;
         if (!(o instanceof Flight)) return false;
         Flight flight = (Flight) o;
-        return Objects.equals(getDEPARTURE(), flight.getDEPARTURE()) &&
-                Objects.equals(getARRIVAL(), flight.getARRIVAL());
+        return Objects.equals(getDeparture(), flight.getDeparture()) &&
+                Objects.equals(getArrival(), flight.getArrival());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(getDEPARTURE(), getARRIVAL());
+        return Objects.hash(getDeparture(), getArrival());
     }
 }

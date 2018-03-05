@@ -40,9 +40,7 @@ public class Commander{
         String arrival = reader.next();
         System.out.println("Please enter the city of desired transfer: ");
         String transfer = reader.next();
-        Flight flight = new Flight(departure, arrival, transfer);
-        return flight;
-
+        return new Flight(departure, arrival, transfer);
     }
 
 

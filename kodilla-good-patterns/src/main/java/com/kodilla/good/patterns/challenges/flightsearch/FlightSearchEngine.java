@@ -1,6 +1,5 @@
 package com.kodilla.good.patterns.challenges.flightsearch;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -10,30 +9,23 @@ public class FlightSearchEngine {
 
     public static List<Flight> searchByDeparture(String departure) {
         return FlightCollection.getFlights().stream()
-                .filter(flight -> flight.getDEPARTURE().equals(departure))
+                .filter(flight -> flight.getDeparture().equals(departure))
                 .collect(Collectors.toList());
     }
 
     public static List<Flight> searchByArrival(String arrival) {
         return FlightCollection.getFlights().stream()
-                .filter(flight -> flight.getARRIVAL().equals(arrival))
+                .filter(flight -> flight.getArrival().equals(arrival))
                 .collect(Collectors.toList());
     }
 
     public static Set<Flight> searchFlightWithTransfer(Flight searchedFlight) {
-       List<Flight> tempListWithDepartures = searchByDeparture(searchedFlight.getDEPARTURE()).stream()
-               .filter(flight -> flight.getARRIVAL().equals(searchedFlight.getTRANSFER()))
-               .collect(Collectors.toList());
+       Stream<Flight> tempListWithDepartures = searchByDeparture(searchedFlight.getDeparture()).stream()
+               .filter(flight -> flight.getArrival().equals(searchedFlight.getTransfer()));
 
-       List<Flight> tempListWithArrivals = searchByArrival(searchedFlight.getARRIVAL()).stream()
-               .filter(flight -> flight.getDEPARTURE().equals(searchedFlight.getTRANSFER()))
-               .collect(Collectors.toList());
+       Stream<Flight> tempListWithArrivals = searchByArrival(searchedFlight.getArrival()).stream()
+               .filter(flight -> flight.getDeparture().equals(searchedFlight.getTransfer()));
 
-        Set<Flight> result = new HashSet<>();
-
-        Stream.of(tempListWithDepartures, tempListWithArrivals)
-                .forEach(result::addAll);
-
-        return result;
+        return Stream.concat(tempListWithDepartures, tempListWithArrivals).collect(Collectors.toSet());
     }
 }

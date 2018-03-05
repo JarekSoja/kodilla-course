@@ -8,7 +8,7 @@ public class PostalService {
 
 
     public String getAdress() {
-        return this.;
+        return this.adressToShip;
     }
 
       public boolean isPaidUpFront() {
