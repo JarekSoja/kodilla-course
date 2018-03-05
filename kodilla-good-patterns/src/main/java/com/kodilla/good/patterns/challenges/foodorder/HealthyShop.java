@@ -15,11 +15,12 @@ public class HealthyShop extends FoodSupplier {
 
     @Override
     public void payment() {
-        System.out.println("Testing");
+        System.out.println("Testing payment method for HealthyShop.");
     }
 
     @Override
     public void delivery() {
+        System.out.println("Testing delivery method for HealthyShop.");
 
     }
 }

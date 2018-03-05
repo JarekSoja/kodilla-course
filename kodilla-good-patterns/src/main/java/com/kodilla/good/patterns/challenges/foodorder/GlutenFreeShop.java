@@ -15,11 +15,12 @@ public class GlutenFreeShop extends FoodSupplier {
 
     @Override
     public void payment() {
-
+        System.out.println("Testing payment method for GlutemFreeShop.");
     }
 
     @Override
     public void delivery() {
+        System.out.println("Testing delivery method for GlutenFreeShop.");
 
     }
 }
