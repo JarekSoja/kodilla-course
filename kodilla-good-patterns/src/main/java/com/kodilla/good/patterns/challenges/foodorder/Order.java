@@ -1,28 +1,25 @@
 package com.kodilla.good.patterns.challenges.foodorder;
 
-import java.util.Map;
+public class Order implements OrderService {
 
-public class Order {
-
+    private OrderRequest orderRequest;
     private FoodSupplier foodSupplier;
-    private String orderedProducts;
-    private double totalPrice;
 
-    public Order(FoodSupplier foodSupplier, String orderedProducts, double totalPrice) {
+    public Order(OrderRequest orderRequest, FoodSupplier foodSupplier) {
+        this.orderRequest = orderRequest;
         this.foodSupplier = foodSupplier;
-        this.orderedProducts = orderedProducts;
-        this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public boolean orderCheck(Order order) {
+        return (foodSupplier.getOfferedProducts().contains(orderRequest.getOrderedProducts()));
+    }
+
+    public OrderRequest getOrderRequest() {
+        return orderRequest;
     }
 
     public FoodSupplier getFoodSupplier() {
         return foodSupplier;
-    }
-
-    public String getOrderedProducts() {
-        return orderedProducts;
-    }
-
-    public double getTotalPrice() {
-        return totalPrice;
     }
 }

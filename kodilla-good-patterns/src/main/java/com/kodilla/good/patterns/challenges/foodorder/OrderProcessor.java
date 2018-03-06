@@ -15,7 +15,9 @@ class OrderProcessor {
     }
 
     public OrderDto process(final OrderRequest orderRequest) {
-        boolean isSold = orderService.order(orderRequest.getUser(), orderRequest.getOrderedProducts());
+
+
+        boolean isSold = orderService.orderCheck(orderRepository.getUser(), orderRequest.getOrderedProducts());
 
         if(isSold) {
             informationService.inform(orderRequest.getUser());
