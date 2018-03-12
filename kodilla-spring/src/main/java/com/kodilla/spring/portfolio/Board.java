@@ -1,5 +1,8 @@
 package com.kodilla.spring.portfolio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Board {
 
     private TaskList toDoList;
@@ -24,9 +27,11 @@ public class Board {
         this.doneList.addTask(task);
     }
 
-    public void getNewestTasks(){
-        System.out.println(this.toDoList.getTask(0));
-        System.out.println(this.inProgressList.getTask(0));
-        System.out.println(this.doneList.getTask(0));
+    public List<String> getNewestTasks(){
+        List<String> result = new ArrayList<>();
+        result.add(this.toDoList.getTask(0));
+        result.add(this.inProgressList.getTask(0));
+        result.add(this.doneList.getTask(0));
+        return result;
     }
 }
