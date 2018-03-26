@@ -5,6 +5,7 @@ class OrderProcessor {
     private InformationService informationService;
     private OrderService orderService;
     private OrderRepository orderRepository;
+    private FoodSupplier foodSupplier;
 
     public OrderProcessor(final InformationService informationService,
                            final OrderService orderService,
@@ -17,11 +18,11 @@ class OrderProcessor {
     public OrderDto process(final OrderRequest orderRequest) {
 
 
-        boolean isSold = orderService.orderCheck(orderRepository.getUser(), orderRequest.getOrderedProducts());
+        boolean isSold = true;
 
         if(isSold) {
-            informationService.inform(orderRequest.getUser());
-            orderRepository.createOrder(orderRequest.getUser(), orderRequest.getOrderedProducts());
+            informationService.inform();
+            orderRepository.createOrder(orderRequest, foodSupplier);
             return new OrderDto(orderRequest.getUser(), true);
         } else {
             return new OrderDto(orderRequest.getUser(), false);
