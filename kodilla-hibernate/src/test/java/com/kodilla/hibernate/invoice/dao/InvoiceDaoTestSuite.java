@@ -43,21 +43,25 @@ public class InvoiceDaoTestSuite {
         Invoice invoice = new Invoice("1.As", items);
         Invoice invoice2 = new Invoice("2.As", items2);
 
-       invoiceDao.save(invoice);
-       invoiceDao.save(invoice2);
+        invoiceDao.save(invoice);
+        invoiceDao.save(invoice2);
 
         //When
         int numberOfItems = invoice.getItems().size();
         int numberOfItems2 = invoice2.getItems().size();
-        System.out.println(numberOfItems);
-        System.out.println(numberOfItems2);
-
+        int firstInvoiceId = invoice.getId();
+        int secondInvoiceId = invoice2.getId();
+        String firstInvoiceProductName = invoice.getItems().get(0).getProduct().getName();
+        String secondInvoiceProductName = invoice2.getItems().get(0).getProduct().getName();
 
         //Then
         Assert.assertEquals(2, numberOfItems);
         Assert.assertEquals(2, numberOfItems2);
+        Assert.assertEquals("Apples", firstInvoiceProductName);
+        Assert.assertEquals("Oranges", secondInvoiceProductName);
 
         //CleanUp
-        invoiceDao.deleteAll();
+        invoiceDao.delete(firstInvoiceId);
+        invoiceDao.delete(secondInvoiceId);
     }
 }
