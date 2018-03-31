@@ -1,5 +1,8 @@
 package com.kodilla.hibernate.invoice;
 
+
+import com.kodilla.hibernate.invoice.dao.InvoiceDao;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
