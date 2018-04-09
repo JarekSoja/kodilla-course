@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.hibernate.KodillaHibernateApplicationTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-03-31T17:51:43" hostname="DESKTOP-SLNKODE" time="0.0">
+<testsuite name="com.kodilla.hibernate.KodillaHibernateApplicationTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2018-04-01T16:28:28" hostname="DESKTOP-SLNKODE" time="0.0">
   <properties/>
   <testcase name="contextLoads" classname="com.kodilla.hibernate.KodillaHibernateApplicationTests" time="0.0">
     <failure message="java.lang.IllegalStateException: Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -89,12 +89,12 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: Employee.r
 	... 71 more
 </failure>
   </testcase>
-  <system-out><![CDATA[2018-03-31 19:51:42.753  INFO 6896 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests], using SpringBootContextLoader
-2018-03-31 19:51:42.754  INFO 6896 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2018-03-31 19:51:42.754  INFO 6896 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests]: KodillaHibernateApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2018-03-31 19:51:42.759  INFO 6896 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kodilla.hibernate.KodillaHibernateApplication for test class com.kodilla.hibernate.KodillaHibernateApplicationTests
-2018-03-31 19:51:42.762  INFO 6896 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2018-03-31 19:51:42.764  INFO 6896 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c6fc6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1be43da, org.springframework.test.context.support.DirtiesContextTestExecutionListener@160a3a1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d42b4a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@15b0f49, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@b8382b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@b5e276, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1561511, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@8e7cf5, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@154756f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4f85e1]
+  <system-out><![CDATA[2018-04-01 18:28:26.942  INFO 5372 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests], using SpringBootContextLoader
+2018-04-01 18:28:26.942  INFO 5372 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2018-04-01 18:28:26.943  INFO 5372 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.kodilla.hibernate.KodillaHibernateApplicationTests]: KodillaHibernateApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2018-04-01 18:28:26.948  INFO 5372 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.kodilla.hibernate.KodillaHibernateApplication for test class com.kodilla.hibernate.KodillaHibernateApplicationTests
+2018-04-01 18:28:26.950  INFO 5372 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-04-01 18:28:26.953  INFO 5372 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1fd7224, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ca0d27, org.springframework.test.context.support.DirtiesContextTestExecutionListener@d8e588, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1b52a2f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1cf08af, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1008084, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@43c209, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@e9713c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1ea877e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@773ee7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@10e9ea]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -104,17 +104,17 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: Employee.r
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::       (v1.5.10.RELEASE)
 
-2018-03-31 19:51:42.813  INFO 6896 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : Starting KodillaHibernateApplicationTests on DESKTOP-SLNKODE with PID 6896 (started by Jarek in C:\Users\Jarek\IdeaProjects\kodilla-course\kodilla-hibernate)
-2018-03-31 19:51:42.813  INFO 6896 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : No active profile set, falling back to default profiles: default
-2018-03-31 19:51:42.816  INFO 6896 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1c15a57: startup date [Sat Mar 31 19:51:42 CEST 2018]; root of context hierarchy
-2018-03-31 19:51:43.192  INFO 6896 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-03-31 19:51:43.193  INFO 6896 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2018-04-01 18:28:26.997  INFO 5372 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : Starting KodillaHibernateApplicationTests on DESKTOP-SLNKODE with PID 5372 (started by Jarek in C:\Users\Jarek\IdeaProjects\kodilla-course\kodilla-hibernate)
+2018-04-01 18:28:26.998  INFO 5372 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : No active profile set, falling back to default profiles: default
+2018-04-01 18:28:27.000  INFO 5372 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1cdca1a: startup date [Sun Apr 01 18:28:27 CEST 2018]; root of context hierarchy
+2018-04-01 18:28:27.378  INFO 5372 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-01 18:28:27.378  INFO 5372 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-03-31 19:51:43.224  INFO 6896 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-03-31 19:51:43.270  INFO 6896 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2018-03-31 19:51:43.337  INFO 6896 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-03-31 19:51:43.342 ERROR 6896 --- [    Test worker] o.hibernate.internal.SessionFactoryImpl  : HHH000177: Error in named query: Employee.retrieveEmployeesByName
+2018-04-01 18:28:27.408  INFO 5372 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-01 18:28:27.457  INFO 5372 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-04-01 18:28:27.517  INFO 5372 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-04-01 18:28:27.527 ERROR 5372 --- [    Test worker] o.hibernate.internal.SessionFactoryImpl  : HHH000177: Error in named query: Employee.retrieveEmployeesByName
 
 org.hibernate.hql.internal.ast.QuerySyntaxException: Employees is not mapped [FROM Employees WHERE LASTNAME = :GIVEN_NAME]
 	at org.hibernate.hql.internal.ast.QuerySyntaxException.generateQueryException(QuerySyntaxException.java:79) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
@@ -215,11 +215,11 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Employees is not
 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:190) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
 	... 80 common frames omitted
 
-2018-03-31 19:51:43.344  WARN 6896 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
-2018-03-31 19:51:43.347  INFO 6896 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
+2018-04-01 18:28:27.529  WARN 5372 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2018-04-01 18:28:27.532  INFO 5372 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-03-31 19:51:43.350 ERROR 6896 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
+2018-04-01 18:28:27.535 ERROR 5372 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
@@ -313,17 +313,17 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: Employee.r
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::       (v1.5.10.RELEASE)
 
-2018-03-31 19:51:43.394  INFO 6896 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : Starting KodillaHibernateApplicationTests on DESKTOP-SLNKODE with PID 6896 (started by Jarek in C:\Users\Jarek\IdeaProjects\kodilla-course\kodilla-hibernate)
-2018-03-31 19:51:43.394  INFO 6896 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : No active profile set, falling back to default profiles: default
-2018-03-31 19:51:43.396  INFO 6896 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@63373e: startup date [Sat Mar 31 19:51:43 CEST 2018]; root of context hierarchy
-2018-03-31 19:51:43.721  INFO 6896 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
-2018-03-31 19:51:43.721  INFO 6896 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2018-04-01 18:28:27.580  INFO 5372 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : Starting KodillaHibernateApplicationTests on DESKTOP-SLNKODE with PID 5372 (started by Jarek in C:\Users\Jarek\IdeaProjects\kodilla-course\kodilla-hibernate)
+2018-04-01 18:28:27.580  INFO 5372 --- [    Test worker] c.k.h.KodillaHibernateApplicationTests   : No active profile set, falling back to default profiles: default
+2018-04-01 18:28:27.583  INFO 5372 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1c2d397: startup date [Sun Apr 01 18:28:27 CEST 2018]; root of context hierarchy
+2018-04-01 18:28:27.908  INFO 5372 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-04-01 18:28:27.909  INFO 5372 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2018-03-31 19:51:43.747  INFO 6896 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2018-03-31 19:51:43.791  INFO 6896 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
-2018-03-31 19:51:43.850  INFO 6896 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2018-03-31 19:51:43.859 ERROR 6896 --- [    Test worker] o.hibernate.internal.SessionFactoryImpl  : HHH000177: Error in named query: Employee.retrieveEmployeesByName
+2018-04-01 18:28:27.936  INFO 5372 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-04-01 18:28:27.979  INFO 5372 --- [    Test worker] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-04-01 18:28:28.037  INFO 5372 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-04-01 18:28:28.041 ERROR 5372 --- [    Test worker] o.hibernate.internal.SessionFactoryImpl  : HHH000177: Error in named query: Employee.retrieveEmployeesByName
 
 org.hibernate.hql.internal.ast.QuerySyntaxException: Employees is not mapped [FROM Employees WHERE LASTNAME = :GIVEN_NAME]
 	at org.hibernate.hql.internal.ast.QuerySyntaxException.generateQueryException(QuerySyntaxException.java:79) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
@@ -423,11 +423,11 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Employees is not
 	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:190) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
 	... 79 common frames omitted
 
-2018-03-31 19:51:43.861  WARN 6896 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
-2018-03-31 19:51:43.864  INFO 6896 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
+2018-04-01 18:28:28.043  WARN 5372 --- [    Test worker] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+2018-04-01 18:28:28.045  INFO 5372 --- [    Test worker] utoConfigurationReportLoggingInitializer : 
 
 Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
-2018-03-31 19:51:43.867 ERROR 6896 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
+2018-04-01 18:28:28.049 ERROR 5372 --- [    Test worker] o.s.boot.SpringApplication               : Application startup failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1628) ~[spring-beans-4.3.14.RELEASE.jar:4.3.14.RELEASE]
@@ -511,7 +511,7 @@ Caused by: org.hibernate.HibernateException: Errors in named queries: Employee.r
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
 	... 70 common frames omitted
 
-2018-03-31 19:51:43.869 ERROR 6896 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1be43da] to prepare test instance [com.kodilla.hibernate.KodillaHibernateApplicationTests@b57499]
+2018-04-01 18:28:28.051 ERROR 5372 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@ca0d27] to prepare test instance [com.kodilla.hibernate.KodillaHibernateApplicationTests@d692de]
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-4.3.14.RELEASE.jar:4.3.14.RELEASE]

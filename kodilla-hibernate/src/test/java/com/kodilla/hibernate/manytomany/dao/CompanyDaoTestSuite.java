@@ -11,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import java.util.List;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
@@ -88,7 +86,7 @@ public class CompanyDaoTestSuite {
         //Then
         Assert.assertEquals(1, allSmiths.size());
         Assert.assertEquals(1, allClarcksons.size());
-        Assert.assertEquals(1, allKovalskys);
+        Assert.assertEquals(1, allKovalskys.size());
 
         //CleanUp
         employeeDao.delete(johnSmithId);

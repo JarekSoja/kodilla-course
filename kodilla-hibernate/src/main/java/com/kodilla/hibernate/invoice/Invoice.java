@@ -1,8 +1,5 @@
 package com.kodilla.hibernate.invoice;
 
-
-import com.kodilla.hibernate.invoice.dao.InvoiceDao;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -39,7 +36,7 @@ public class Invoice {
     @OneToMany(
             targetEntity = Item.class,
             mappedBy = "invoice",
-            cascade = {CascadeType.ALL},
+            cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
     @Column (name = "ITEMS_INVOICE")
