@@ -1,5 +1,6 @@
 package com.kodilla.hibernate.manytomany.dao;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
 import org.junit.Assert;
@@ -76,17 +77,23 @@ public class CompanyDaoTestSuite {
         employeeDao.save(johnSmith);
         int johnSmithId = johnSmith.getId();
         List<Employee> allSmiths = employeeDao.retrieveEmployeesByName("Smith");
+        String employeeWithNameSmith = johnSmith.getLastname();
         employeeDao.save(stephanieClarckson);
         int stephanieClarcksonId = stephanieClarckson.getId();
         List<Employee> allClarcksons = employeeDao.retrieveEmployeesByName("Clarckson");
+        String employeeWithNameClarckson = stephanieClarckson.getLastname();
         employeeDao.save(lindaKovalsky);
         int lindaKovalskyId = lindaKovalsky.getId();
         List<Employee> allKovalskys = employeeDao.retrieveEmployeesByName("Kovalsky");
+        String employeeWithNameKovalsky = lindaKovalsky.getLastname();
 
         //Then
         Assert.assertEquals(1, allSmiths.size());
         Assert.assertEquals(1, allClarcksons.size());
         Assert.assertEquals(1, allKovalskys.size());
+        Assert.assertEquals("Smith", employeeWithNameSmith);
+        Assert.assertEquals("Clarckson", employeeWithNameClarckson);
+        Assert.assertEquals("Kovalsky", employeeWithNameKovalsky);
 
         //CleanUp
         employeeDao.delete(johnSmithId);
@@ -105,17 +112,23 @@ public class CompanyDaoTestSuite {
         companyDao.save(softwareMachine);
         int softwareMachineId = softwareMachine.getId();
         List<Company> companiesWithSof = companyDao.retrieveCompaniesByFirstThreeLetters("Sof");
+        String companyWithSof = softwareMachine.getName();
         companyDao.save(dataMaesters);
         int dataMaestersId = dataMaesters.getId();
         List<Company> companiesWithDat = companyDao.retrieveCompaniesByFirstThreeLetters("Dat");
+        String companyWithDat = dataMaesters.getName();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
         List<Company> companiesWithGre = companyDao.retrieveCompaniesByFirstThreeLetters("Gre");
+        String companyWithGre = greyMatter.getName();
 
         //Then
         Assert.assertEquals(1, companiesWithSof.size());
         Assert.assertEquals(1, companiesWithDat.size());
         Assert.assertEquals(1, companiesWithGre.size());
+        Assert.assertEquals("Software Machine", companyWithSof);
+        Assert.assertEquals("Data Maesters", companyWithDat);
+        Assert.assertEquals("Grey Matter", companyWithGre);
 
         //CleanUp
         companyDao.delete(softwareMachineId);
