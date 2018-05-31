@@ -47,7 +47,7 @@ public class TaskList {
             fetch = FetchType.LAZY
 
     )
-    private List<Task> getTasks() {
+    public List<Task> getTasks() {
         return tasks;
     }
 

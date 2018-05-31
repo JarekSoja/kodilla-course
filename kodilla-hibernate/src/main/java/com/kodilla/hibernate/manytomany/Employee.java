@@ -4,24 +4,31 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-@NamedQuery(
-        name = "Employee.retrieveEmployeesByName",
-        query = "FROM Employee WHERE lastname = :GIVEN_NAME"
-)
+
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesByName",
+                query = "FROM Employee WHERE lastName = :GIVEN_NAME"
+        ),
+        @NamedQuery(
+                name = "Employee.retrieveEmployeesWithLastNameContaining",
+                query = "FROM Employee WHERE lastName LIKE CONCAT('%',:GIVEN_STRING,'%')"
+        )
+})
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
     private int id;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private List<Company> companies = new ArrayList<>();
 
     public Employee() {
     }
 
-    public Employee(String firstname, String lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
+    public Employee(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     @Id
@@ -34,17 +41,18 @@ public class Employee {
 
     @NotNull
     @Column(name = "FIRSTNAME")
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
     @NotNull
     @Column(name = "LASTNAME")
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
-    @ManyToMany (cascade = CascadeType.ALL)
-    @JoinTable (
+
+    @ManyToMany
+    @JoinTable(
             name = "JOIN_COMPANY_EMPLYEE",
             joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},
             inverseJoinColumns = {@JoinColumn(name = "COMPANY_ID", referencedColumnName = "COMPANY_ID")}
@@ -57,12 +65,12 @@ public class Employee {
         this.id = id;
     }
 
-    private void setFirstname(String firstname) {
-        this.firstname = firstname;
+    private void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    private void setLastname(String lastname) {
-        this.lastname = lastname;
+    private void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     private void setCompanies(List<Company> companies) {

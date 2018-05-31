@@ -1,6 +1,5 @@
 package com.kodilla.hibernate.manytomany.dao;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
 import org.junit.Assert;
@@ -77,15 +76,15 @@ public class CompanyDaoTestSuite {
         employeeDao.save(johnSmith);
         int johnSmithId = johnSmith.getId();
         List<Employee> allSmiths = employeeDao.retrieveEmployeesByName("Smith");
-        String employeeWithNameSmith = johnSmith.getLastname();
+        String employeeWithNameSmith = johnSmith.getLastName();
         employeeDao.save(stephanieClarckson);
         int stephanieClarcksonId = stephanieClarckson.getId();
         List<Employee> allClarcksons = employeeDao.retrieveEmployeesByName("Clarckson");
-        String employeeWithNameClarckson = stephanieClarckson.getLastname();
+        String employeeWithNameClarckson = stephanieClarckson.getLastName();
         employeeDao.save(lindaKovalsky);
         int lindaKovalskyId = lindaKovalsky.getId();
         List<Employee> allKovalskys = employeeDao.retrieveEmployeesByName("Kovalsky");
-        String employeeWithNameKovalsky = lindaKovalsky.getLastname();
+        String employeeWithNameKovalsky = lindaKovalsky.getLastName();
 
         //Then
         Assert.assertEquals(1, allSmiths.size());

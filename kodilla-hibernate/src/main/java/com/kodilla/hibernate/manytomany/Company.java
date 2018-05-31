@@ -11,6 +11,12 @@ import java.util.List;
                 " WHERE SUBSTRING(COMPANY_NAME,1,3) = :GIVEN_STRING",
         resultClass = Company.class
 )
+@NamedQuery(
+        name = "Company.retrieveCompaniesWithNameContaining",
+        query = "FROM Company WHERE name LIKE CONCAT('%',:GIVEN_STRING,'%')"
+)
+
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -38,7 +44,8 @@ public class Company {
     public String getName() {
         return name;
     }
-    @ManyToMany (cascade = CascadeType.ALL, mappedBy = "companies")
+
+    @ManyToMany(mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }
