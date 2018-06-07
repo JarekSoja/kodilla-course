@@ -20,8 +20,8 @@ public interface CompanyDao extends CrudRepository<Company, Integer> {
     @Query
     List<Company> retrieveCompaniesWithNameContaining(@Param("GIVEN_STRING") String givenString);
 
-//    @Override
-//    Company save(Company company);
+    @Override
+    Company save(Company company);
 }
 
 
