@@ -26,21 +26,21 @@ public class FacebookTestingApp {
 
         webDriver.get("https://facebook.com");
 
-        WebElement firstnameField = webDriver.findElement(By.id(XPATH_FIRSTNAME));
-        firstnameField.sendKeys("DUMMY NAME");
-
-        WebElement lastnameField = webDriver.findElement(By.id(XPATH_LASTNAME));
-        lastnameField.sendKeys("DUMMY SURNAME");
-
-        WebElement mailField = webDriver.findElement(By.id(XPATH_DUMMY_MAIL));
-        mailField.sendKeys("DUMMY@DUMMY.COM");
-
-
-        WebElement passwordField = webDriver.findElement(By.id(XPATH_DUMMY_PASSWORD));
-        actions.moveToElement(passwordField);
-        actions.click();
-        actions.sendKeys("YEP, DUMMY PASSWORD");
-        actions.build().perform();
+//        WebElement firstnameField = webDriver.findElement(By.id(XPATH_FIRSTNAME));
+//        firstnameField.sendKeys("DUMMY NAME");
+//
+//        WebElement lastnameField = webDriver.findElement(By.id(XPATH_LASTNAME));
+//        lastnameField.sendKeys("DUMMY SURNAME");
+//
+//        WebElement mailField = webDriver.findElement(By.id(XPATH_DUMMY_MAIL));
+//        mailField.sendKeys("DUMMY@DUMMY.COM");
+//
+//
+//        WebElement passwordField = webDriver.findElement(By.id(XPATH_DUMMY_PASSWORD));
+//        actions.moveToElement(passwordField);
+//        actions.click();
+//        actions.sendKeys("DUMMY PASSWORD");
+//        actions.build().perform();
 
         WebElement selectDay = webDriver.findElement(By.id(XPATH_BIRTH_DAY));
         Select dayOfBirth = new Select(selectDay);
